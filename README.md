@@ -6,6 +6,8 @@
     |_____/ \___/|_| |_| |_|\__,_|_|_| |_|\/  \/   |_|_|\__,_|\___\__,_|_|  \__,_|\___|_|  
     A commandline tool to wildcard domain registrations against the RIPE database (com/net only)
     @littl3field
+    
+    50 results displayed per query
      
   ## Optional arguments in order:
   ```
