@@ -7,7 +7,7 @@
     a commandline tool to wildcard domain registrations against the whois database (com/net only)
     @littl3field
      
-  #optional arguments in order:
+  ## Optional arguments in order:
   
   -h, --help    show this help message and exit
   -s SINGLE     Single domain to check, example = -s google (default: None)
@@ -15,14 +15,15 @@
   -w WHITELIST  Set a file containing whitelisted domains (default: None)
   -o OUTPUT     Set a file to output too (default: None)
   
-  #Example single domain argument 
-  
+  # Example single domain argument 
+  ```
   python WhoIsWildcarder.py -s google -w WhiteListFile.txt 
+  ```
   
-  #Example file (list of domains) argument 
-  
+  # Example file (list of domains) argument 
+  ```
   python WhoIsWildcarder.py -f example.txt -w WhiteListFile.txt -o CustomOutput.log
-      
-   #TODO:
-
-lots.
+  ``` 
+  # TODO:
+  
+  - Lots.
