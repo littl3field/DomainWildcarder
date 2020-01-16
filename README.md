@@ -1,9 +1,4 @@
-   _____                        _   __          ___ _     _                   _           
-   |  __ \                      (_)  \ \        / (_) |   | |                 | |          
-   | |  | | ___  _ __ ___   __ _ _ _ _\ \  /\  / / _| | __| | ___ __ _ _ __ __| | ___ _ __ 
-   | |  | |/ _ \| '_ ` _ \ / _` | | '_ \ \/  \/ / | | |/ _` |/ __/ _` | '__/ _` |/ _ \ '__|
-   | |__| | (_) | | | | | | (_| | | | | \  /\  /  | | | (_| | (_| (_| | | | (_| |  __/ |   
-   |_____/ \___/|_| |_| |_|\__,_|_|_| |_|\/  \/   |_|_|\__,_|\___\__,_|_|  \__,_|\___|_|   
+ 
    Run Domain Wildcard Check for .com/.net
    @littl3field
 
@@ -14,3 +9,10 @@ optional arguments in order:
   -w WHITELIST  Set a file containing whitelisted domains (default: None)
   -o OUTPUT     Set a file to output too (default: None)
 
+   _____                        _   __          ___ _     _                   _           
+   |  __ \                      (_)  \ \        / (_) |   | |                 | |          
+   | |  | | ___  _ __ ___   __ _ _ _ _\ \  /\  / / _| | __| | ___ __ _ _ __ __| | ___ _ __ 
+   | |  | |/ _ \| '_ ` _ \ / _` | | '_ \ \/  \/ / | | |/ _` |/ __/ _` | '__/ _` |/ _ \ '__|
+   | |__| | (_) | | | | | | (_| | | | | \  /\  /  | | | (_| | (_| (_| | | | (_| |  __/ |   
+   |_____/ \___/|_| |_| |_|\__,_|_|_| |_|\/  \/   |_|_|\__,_|\___\__,_|_|  \__,_|\___|_|  
+    is a PowerShell tool to quickly configure the Windows Event Audit Policies for monitoring & incident response. 
