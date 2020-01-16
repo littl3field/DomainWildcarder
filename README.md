@@ -15,6 +15,7 @@
   -w WHITELIST  Set a file containing whitelisted domains (default: None)
   -o OUTPUT     Set a file to output too (default: None)
   
+  
   # Example single domain argument 
   ```
   python WhoIsWildcarder.py -s google -w WhiteListFile.txt 
