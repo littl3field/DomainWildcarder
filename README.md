@@ -7,11 +7,15 @@
     A commandline tool to wildcard domain registrations against the RIPE database (com/net only)
     @littl3field
     
-    50 results displayed per query
+
+    
      
   ## Optional arguments in order:
   ```
   -h, --help    show this help message and exit
+  
+  50 results displayed per query
+  
   -s SINGLE     Single domain to check, example = -s google (default: None)
   -f FILENAME   File to be checked with one domain per line (default: None)
   -w WHITELIST  Set a file containing whitelisted domains (default: None)
