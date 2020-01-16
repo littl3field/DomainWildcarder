@@ -8,13 +8,13 @@
     @littl3field
      
   ## Optional arguments in order:
-  
+  ```
   -h, --help    show this help message and exit
   -s SINGLE     Single domain to check, example = -s google (default: None)
   -f FILENAME   File to be checked with one domain per line (default: None)
   -w WHITELIST  Set a file containing whitelisted domains (default: None)
   -o OUTPUT     Set a file to output too (default: None)
-  
+  ```
   
   # Example single domain argument 
   ```
