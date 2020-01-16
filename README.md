@@ -4,7 +4,7 @@
     | |  | |/ _ \| '_ ` _ \ / _` | | '_ \ \/  \/ / | | |/ _` |/ __/ _` | '__/ _` |/ _ \ '__|
     | |__| | (_) | | | | | | (_| | | | | \  /\  /  | | | (_| | (_| (_| | | | (_| |  __/ |   
     |_____/ \___/|_| |_| |_|\__,_|_|_| |_|\/  \/   |_|_|\__,_|\___\__,_|_|  \__,_|\___|_|  
-    A commandline tool to wildcard domain registrations against the whois database (com/net only)
+    A commandline tool to wildcard domain registrations against the RIPE database (com/net only)
     @littl3field
      
   ## Optional arguments in order:
