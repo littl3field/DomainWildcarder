@@ -62,7 +62,7 @@ def main():
 |___/ \___/|_| |_| |_|\__,_|_|_| |_|\/  \/|_|_|\__,_|\___\__,_|_|  \__,_|\___|_|   
 Run Domain Wildcard Check for .com/.net
 
-optional arguments:
+optional arguments in order:
   -h, --help    show this help message and exit
   -s SINGLE     Single domain to check, example = -s google (default: None)
   -f FILENAME   File to be checked with one domain per line (default: None)
@@ -94,28 +94,74 @@ optional arguments:
 
     if args.single is not None:
         results = whois_single(args.single)
-        print(bcolors.OKBLUE + "Wild Carded Domains:" + "\n" + "\n" + str(results) + bcolors.ENDC)
+        print(bcolors.OKBLUE + "Wild Carded Domains:" + "\n" + "\n" + str(results) + "\n" + bcolors.ENDC)
 
+        if args.whitelist is not None: #TODO: else statement here as it does not work without a whitelistfile specified
+            white = removewhitelist(args.whitelist)
+            a = list(set(results) - set(white))
+            file = "WhoIsOutput.txt"
+            default = open(file, 'a')
+            print(bcolors.OKBLUE + "Wild Carded Domains + Whitelist Removed:" + "\n" + "\n" + str(a) + "\n" + bcolors.ENDC)
 
-        # if args.whitelist is not None: #TODO: else statement here as it does not work without a whitelistfile specified
-        #     white = removewhitelist(args.whitelist)
-        #     a = list(set(results) - set(white))
-        #     default = open('WhoIsOutput.txt', 'a')
-        #
-        #
-        #     if args.output is not None:
-        #         with open(args.output, 'a') as f:
-        #             f.write(str(a) + '\n')
-        #             print(bcolors.OKBLUE + "[i] Saving results to" + args.output + bcolors.ENDC)
-        #
-        #     else:
-        #         with default as f:
-        #             f.write(str(a) + '\n')
-        #             print(a)
+            if args.output is not None:
+                with open(args.output, 'a') as f:
+                    for item in a:
+                        f.write("%s\n" % str(item))
+                    print(bcolors.WARNING + "[i] Saving results to " + str(args.output) + bcolors.ENDC)
+            else:
+                with default as f:
+                    for item in a:
+                        f.write("%s\n" % str(item))
+                    print(bcolors.WARNING + "[i] Saving results to " + str(file) + bcolors.ENDC)
+
+        if args.output is not None:
+            with open(args.output, 'a') as f:
+                for item in results:
+                    f.write("%s\n" % str(item))
+                print(bcolors.WARNING + "[i] Saving results to " + str(args.output) + bcolors.ENDC)
+        else:
+            file = "WhoIsOutput.txt"
+            default = open(file, 'a')
+            with default as f:
+                for item in results:
+                    f.write("%s\n" % str(item))
+                print(bcolors.WARNING + "[i] Saving results to " + str(file) + bcolors.ENDC)
+
 
     elif args.filename is not None:
         domains = whois_multiple(read_filename(args.filename))
-        print(bcolors.OKBLUE + "Wild Carded Domains:" + "\n" + "\n" + str(domains) + bcolors.ENDC)
+        print(bcolors.OKBLUE + "Wild Carded Domains:" + "\n" + "\n" + str(domains) + "\n" + bcolors.ENDC)
+
+        if args.whitelist is not None: #TODO: else statement here as it does not work without a whitelistfile specified
+            white = removewhitelist(args.whitelist)
+            a = list(set(domains) - set(white))
+            file = "WhoIsOutput.txt"
+            default = open(file, 'a')
+            print(bcolors.OKBLUE + "Wild Carded Domains + Whitelist Removed:" + "\n" + "\n" + str(a) + "\n" + bcolors.ENDC)
+
+            if args.output is not None:
+                with open(args.output, 'a') as f:
+                    for item in a:
+                        f.write("%s\n" % str(item))
+                    print(bcolors.WARNING + "[i] Saving results to " + str(args.output) + bcolors.ENDC)
+            else:
+                with default as f:
+                    for item in a:
+                        f.write("%s\n" % str(item))
+                    print(bcolors.WARNING + "[i] Saving results to " + str(file) + bcolors.ENDC)
+
+        if args.output is not None:
+            with open(args.output, 'a') as f:
+                for item in domains:
+                    f.write("%s\n" % str(item))
+                print(bcolors.WARNING + "[i] Saving results to " + str(args.output) + bcolors.ENDC)
+        else:
+            file = "WhoIsOutput.txt"
+            default = open(file, 'a')
+            with default as f:
+                for item in domains:
+                    f.write("%s\n" % str(item))
+                print(bcolors.WARNING + "[i] Saving results to " + str(file) + bcolors.ENDC)
 
 if __name__ == "__main__":
     main()
